@@ -1,5 +1,4 @@
 import requests
-import os
 from typing import List
 import json
 import csv
@@ -9,7 +8,6 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 class YoutubePlaylistScrapper:
     def __init__(self, playlist_link: str = None):
-        playlist_id = json.load(open('C:\\Users\\jacob\\PycharmProjects\\fantano-knowledge-graph\\src\\main\\resources\\playlist_ids.json'))
         self.playlist_id = playlist_link
         self._scraped_video_ids = []
         self._scraped_video_info = []
